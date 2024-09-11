@@ -7,7 +7,7 @@ const details = require(path.join(__dirname, 'public', 'schema', 'studentDetails
 const User = require(path.join(__dirname, 'public', 'schema', 'users.js'));
 const timer = require(path.join(__dirname, 'public', 'schema', 'timer.js'));
 const attendance = require(path.join(__dirname, 'public', 'schema', 'attendance.js'));
-
+require('dotenv').config();
 const mongoose = require('mongoose');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +40,7 @@ const authenticateToken = (req, res, next) => {
     next(); // Proceed to the next middleware or route handler
   });
 };
-const mongoURI = 'mongodb+srv://regulavenu985:Venu7997@booksApp.2k7tw.mongodb.net/autoAttend?retryWrites=true&w=majority';
+const mongoURI =process.env.MONGO_URL;
 mongoose.connect(mongoURI).then(() => {
   console.log('mongo is connceted....');
 }).catch((err) => {
