@@ -1,0 +1,330 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #2c3e50;
+  }
+  
+  .teacher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4A90E2;
+    color: white;
+  }
+  
+  .teacher-nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    background-color: #34495e;
+  }
+  
+  .teacher-nav li {
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .attendance-section {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .start-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  #get-list{
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .start-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .branch-select {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .room-select {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .period-select {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .live-status {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+  }
+  
+  .history-section {
+    padding: 30px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .history-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .history-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Set a maximum width */
+    border-radius: 10px;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input,#role {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #loginbutton {
+    display: inline-block; /* Make button fit text width */
+    padding: 10px 20px;    /* Adjust padding for spacing */
+    font-size: 16px;       /* Adjust font size as needed */
+    background-color: #007bff; /* Button background color */
+    color: white;          /* Text color */
+    border: none;          /* Remove default border */
+    border-radius: 5px;   /* Rounded corners */
+    cursor: pointer;       /* Pointer cursor on hover */
+    text-align: center;    /* Center text */
+    margin-left: 40%;
+    margin-right: 40%;
+   margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the open modal button */
+  .open-modal-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .open-modal-button:hover {
+    background-color: #0056b3;
+  }
+  #date-time{
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .teacherDetails{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #teacherEmail{
+    font-weight: bold;
+    font-size: 18px;
+  }
+  /* Base table styling */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Styling for table headers */
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header styling */
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for rows */
+tr:hover {
+  transform: scale(1.02);
+  background-color: #b9dfb6; /* Hover color */
+  cursor: pointer;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Alternating row styles for Present Students table */
+#PresentAttendanceTable tbody tr:nth-child(even) {
+  background-color: #d4edda; /* Light green */
+}
+
+#PresentAttendanceTable tbody tr:nth-child(odd) {
+  background-color: #c3e6cb; /* Green */
+}
+
+/* Absent Students table with alternating light red rows */
+#AbsentAttendanceTable tbody tr:nth-child(even) {
+  background-color: #f8d7da; /* Light red */
+  color: #721c24;
+}
+
+#AbsentAttendanceTable tbody tr:nth-child(odd) {
+  background-color: #f5c6cb; /* Darker light red */
+  color: #721c24;
+}
+
+/* Bold text styling for table data */
+td {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Header hover effect */
+th:hover {
+  background-color: #0056b3;
+  box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Present Students table specific hover effects */
+#PresentAttendanceTable tbody tr:hover {
+  background-color: #b2dfb3; /* Darker green */
+  color: #2d5a27;
+}
+
+/* Absent Students table specific hover effects */
+#AbsentAttendanceTable tbody tr:hover {
+  background-color: #f1b0b7; /* Darker red on hover */
+  color: #490508;
+}
+
+/* Animate row entry on loading */
+tbody tr {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Add a subtle glow on hover */
+tbody tr:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table footer */
+tfoot {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}

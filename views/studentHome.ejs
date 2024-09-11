@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoAttend - Student Dashboard</title>
+  <link rel="stylesheet" href="/css/studentHome.css">
+</head>
+<body>
+  <header class="student-header">
+    <h1>AutoAttend</h1>
+    <div class="studentDetails">
+    <p id="sectionName">SEC</p>
+    <p id="rollNumber">21H5******</p>
+    <p id="studentName">Name</p>
+  </div>
+  </header>
+
+  <section class="attendance-section">
+    <h2>Mark Your Attendance</h2>
+    <button id="attendance-button" class="attendance-button">Mark My Attendance</button>
+    <div class="timer-container" id="timerContainer">
+      <div class="timer-border">
+          <div id="countdown" class="countdown">05:00</div>
+      </div>
+  </div>
+  </section>
+
+  <section class="recent-attendance">
+    <h2>Recent Attendance Records</h2>
+    <div class="record-card">Sept 5, 2024 - 09:05 AM</div>
+    <div class="record-card">Sept 4, 2024 - 09:10 AM</div>
+  </section>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="closeModal">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required value="21h51a1257@cmrcet.ac.in">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required value="123456">
+      <label for="role">Role:</label>
+      <select name="role" id="role" required>
+        <option value="teacher">teacher</option>
+        <option value="student">student</option>
+      </select>
+      <button type="submit" id="loginbutton">Login</button>
+    </form>
+    <p id="loginStatus"></p>
+  </div>
+</div>
+  <script src="/js/studentHome.js"></script>
+</body>
+</html>

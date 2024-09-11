@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoAttend - Teacher Dashboard</title>
+  <link rel="stylesheet" href="/css/teacherHome.css">
+</head>
+<body>
+  <header class="teacher-header">
+    <h1>AutoAttend</h1>
+    <div class="teacherDetails">
+    <p id="teacherEmail" class="teacherEmail">teacher@gnail.com</p>
+    <div id="date-time" class="date-time">Date: 2024-09-05 | Time: 09:30 AM</div>
+  </div>
+  </header>
+
+  <nav class="teacher-nav">
+    <ul>
+      <li>Teacher Dashboard</li>
+      <li>Classes</li>
+      <li>Reports</li>
+      <li>Settings</li>
+    </ul>
+  </nav>
+
+  <section class="attendance-section">
+    <h2>Start Attendance</h2>
+    <button id="start-button" class="start-button">Start Attendance</button>
+    <select id="branch-select" class="branch-select">
+      <option value="IT">IT</option>
+      <option value="CSE">CSE-A</option>
+      <option value="CSE">CSE-B</option>
+      <option value="CSE">CSE-C</option>
+      <option value="CSE">CSE-D</option>
+      <option value="IT">ECE</option>
+      <option value="IT">MECH</option>
+      <option value="IT">CIV</option>
+      <option value="IT">CSD</option>
+      <option value="IT">AIML</option>
+      <option value="IT">CSM</option>
+    </select>
+    <select id="room-select" class="room-select">
+      <option value="301">301</option>
+      <option value="302">302</option>
+      <option value="303">303</option>
+      <option value="304">304</option>
+      <option value="305">305</option>
+      <option value="306">306</option>
+      <option value="307">307</option>
+      <option value="308">308</option>
+      <option value="309">309</option>
+      <option value="310">310</option>
+      <option value="311">311</option>
+      <option value="312">312</option>
+    </select>
+
+    <select id="period-select" class="period-select">
+      <option value="09:10 - 10:10">09:10 - 10:10</option>
+      <option value="10:10 - 11:10">10:10 - 11:10</option>
+      <option value="11:10 - 12:10">11:10 - 12:10</option>
+      <option value="01:00 - 02:00">01:00 - 02:00</option>
+      <option value="02:00 - 03:00">02:00 - 03:00</option>
+      <option value="03:00 - 04:00">03:00 - 04:00</option>
+    </select>
+    <button id="get-list" class="get-list">
+      Get Attendance List
+    </button>
+    <div class="live-status">
+      <h3>Live Attendance Status</h3>
+      <p>Students Present: 20/30</p>
+    </div>
+    <table id="PresentAttendanceTable">
+      <thead>
+        <tr>
+          <th>Roll Number</th>
+          <th>Name</th>
+          <th>Distance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be inserted here -->
+      </tbody>
+    </table>
+    <table id="AbsentAttendanceTable">
+      <thead>
+        <tr>
+          <th>Roll Number</th>
+          <th>Name</th>
+          <th>Distance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be inserted here -->
+      </tbody>
+    </table>
+  </section>
+
+  <section class="history-section">
+    <h2>Attendance History</h2>
+    <div class="tabs">
+      <button>Today's Attendance</button>
+      <button>Weekly Report</button>
+      <button>Monthly Overview</button>
+    </div>
+    <div class="history-grid">
+      <div class="history-card">Student 1 - 09:05 AM</div>
+      <div class="history-card">Student 2 - 09:10 AM</div>
+      <!-- Add more students here -->
+    </div>
+  </section>
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required value="teacher1@cmrcet.ac.in">
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required value="123456">
+        <label for="role">Role:</label>
+        <select name="role" id="role" required>
+          <option value="teacher">teacher</option>
+          <option value="student">student</option>
+        </select>
+        <button type="submit" id="loginbutton">Login</button>
+      </form>
+      <p id="loginStatus"></p>
+    </div>
+  </div>
+  <script src="/js/teacherHome.js"></script>
+</body>
+</html>
